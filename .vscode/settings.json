@@ -1,0 +1,48 @@
+{
+    "files.autoSave": "onFocusChange",
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "[python]": {
+      "editor.formatOnSave": true,
+      "editor.matchBrackets": "always",
+      "editor.inlineSuggest.enabled": true,
+      "editor.tabSize": 4,
+      "editor.rulers": [
+        120
+      ],
+    },
+  
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+      "--disable=missing-module-docstring,missing-function-docstring,missing-class-docstring",
+      "--ignore-patterns=(.)*_test.py,test_(.)*.py",
+      "--max-line-length=120"
+    ],
+    "python.linting.pylamaEnabled": true,
+    "python.linting.banditEnabled": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+      "reportMissingImports": "none"
+    },
+  
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+      "--exclude",
+      "((.git|.venv|.tox|migrations))",
+      "--include",
+      ".pyi?$",
+      "--line-length",
+      "120"
+    ],
+  
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+      "--cov-report=term",
+      "--cov-report=xml:coverage.xml",
+      "--cov-report=html:htmlcov",
+      "offer"
+    ],
+}
+  
